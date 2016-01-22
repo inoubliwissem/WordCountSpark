@@ -1,0 +1,30 @@
+
+program: WordCoun with Spark Framework
+
+
+Prerequisites:
+=========================================
+java JDK +7
+spark 1.5.0 Framework
+maven +2
+=========================================
+create our project with maven tool
+=========================================
+create project maven:
+mvn archetype:generate
+ -DgroupId=com.spark.app
+ -DartifactId=spark
+ -DarchetypeArtifactId=maven-archetype-quickstart
+ -DinteractiveMode=false
+build our project :
+  cd spark
+  mvn package
+============================================
+Steps to run this project
+============================================
+example to input and output file:
+        input hdfs://localhost:8020/user/hdfs/test
+        output hdfs://localhost:8020/user/hdfs/rst
+
+/home/../spark/bin/spark-submit --class com.spark.App arg1 arg2 --master local[2] taget/jar
+
